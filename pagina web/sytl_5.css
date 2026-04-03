@@ -1,0 +1,18 @@
+.contenedor {
+    display: flex;
+}
+
+/* Direccion */
+flex-direction: row | column | row-reverse | column-reverse;
+
+/* Alineation horizinte */
+justify-content: flex-start | center | space-between | space-around | space-evenly;
+
+/* Alineacion vertical */
+align-items: stretch | center | flex-start | flex-end;
+
+/* Multiples lineas */
+flex-wrap: wrap | nowrap | wrap-reverse;
+
+/* Especiado entre elementos */
+gap: 20px;

@@ -1,0 +1,14 @@
+.tarejta {
+    display: felx;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+.precio {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: auto;
+}

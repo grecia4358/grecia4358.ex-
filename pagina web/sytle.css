@@ -1,0 +1,14 @@
+/* selector de elemento */
+p{
+    color: blue;
+}
+
+/* selector de clase */
+.mi-clase{
+    font-size: 18px;
+}
+
+/* selector de Id */
+#mi-id {
+    background-color: yellow;
+}

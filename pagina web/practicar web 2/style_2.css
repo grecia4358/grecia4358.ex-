@@ -1,0 +1,32 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.menu li:hover {
+    color: #ff6b6b;
+    cursor: pointer;
+}
+
+.btn{
+    background: #ff6b6b;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.tarejta {
+    display: felx;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}

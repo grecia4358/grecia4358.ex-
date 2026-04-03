@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        
+        /* Mobile First */
+        .navbar {
+            background: #333;
+            padding: 1rem;
+        }
+        
+        .menu {
+            display: none;
+            list-style: none;
+        }
+        
+        .menu.active {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .menu-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            padding: 1rem;
+        }
+        
+        .card {
+            background: #f4f4f4;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        /* Tablet */
+        @media (min-width: 768px) {
+            .menu-btn {
+                display: none;
+            }
+            
+            .menu {
+                display: flex !important;
+                flex-direction: row;
+                justify-content: center;
+                gap: 2rem;
+            }
+            
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        /* Escritorio */
+        @media (min-width: 1024px) {
+            .grid {
+                grid-template-columns: repeat(3, 1fr);
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        <ul class="menu" id="menu">
+            <li>Inicio</li>
+            <li>Servicios</li>
+            <li>Productos</li>
+            <li>Contacto</li>
+        </ul>
+    </nav>
+    
+    <div class="grid">
+        <div class="card">Card 1</div>
+        <div class="card">Card 2</div>
+        <div class="card">Card 3</div>
+    </div>
+    
+    <script>
+        function toggleMenu() {
+            document.getElementById('menu').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

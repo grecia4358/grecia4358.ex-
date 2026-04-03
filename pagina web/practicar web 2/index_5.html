@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Logo Centrado</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Navbar principal */
+        .navbar {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Contenedor Flex */
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Grupo izquierdo */
+        .nav-left {
+            display: flex;
+            gap: 2rem;
+        }
+
+        /* Logo centrado */
+        .logo {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Grupo derecho */
+        .nav-right {
+            display: flex;
+            gap: 2rem;
+        }
+
+        /* Estilos de enlaces */
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            padding: 0.5rem 0;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            opacity: 0.8;
+        }
+
+        /* Efecto subrayado */
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: white;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 1rem;
+            }
+
+            .nav-left, .nav-right {
+                gap: 1rem;
+            }
+
+            .logo {
+                font-size: 1.2rem;
+            }
+
+            .nav-link {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Enlaces izquierda -->
+            <div class="nav-left">
+                <a href="#" class="nav-link">Inicio</a>
+                <a href="#" class="nav-link">Productos</a>
+            </div>
+
+            <!-- Logo centrado -->
+            <a href="#" class="logo">MiLogo</a>
+
+            <!-- Enlaces derecha -->
+            <div class="nav-right">
+                <a href="#" class="nav-link">Servicios</a>
+                <a href="#" class="nav-link">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido de ejemplo -->
+    <div style="padding: 2rem; text-align: center; margin-top: 2rem;">
+        <h1>Bienvenido</h1>
+        <p>Barra de navegación con logo centrado y enlaces a los extremos</p>
+    </div>
+</body>
+</html>

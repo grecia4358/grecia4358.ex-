@@ -1,0 +1,19 @@
+/* relativo */
+.caja {
+    position: relative;
+    top: 10px;
+}
+
+/* Absoluto */
+.menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* Fijo */
+.boton-flotante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
